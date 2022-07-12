@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --VeryDarkcyan: hsl(158, 50%, 13%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+h1 {
+  font-family: "Fraunces", serif;
+}
+.container {
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card-img img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.desktop-img {
+  display: none;
+}
+.card-text {
+  padding: 20px;
+}
+.text-header {
+  font-size: 13px;
+  color: var(--Darkgrayishblue);
+}
+.text-header {
+  letter-spacing: 0.25rem;
+  padding-bottom: 5px;
+}
+.text-body {
+  font-size: 13px;
+  line-height: 1.5rem;
+  padding: 10px 0 40px 0;
+  color: var(--Darkgrayishblue);
+}
+.price {
+  color: var(--Darkcyan);
+  display: flex;
+  align-items: center;
+}
+.price span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--Darkgrayishblue);
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-left: 25px;
+}
+button {
+  cursor: pointer;
+  background-color: var(--Darkcyan);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+button:hover {
+  background-color: var(--VeryDarkcyan);
+}
+button img {
+  margin-right: 10px;
+}
+@media (min-width: 800px) {
+  .container {
+    width: 65%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card-img {
+    width: 50%;
+  }
+  .card-img img {
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .desktop-img {
+    height: 100%;
+    display: block;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .card-text {
+    width: 50%;
+    padding: 30px 40px;
+  }
+  .text-header {
+    padding-bottom: 15px;
+  }
+  .text-body {
+    padding: 20px 0 30px 0;
+    font-size: 15px;
+  }
+  button {
+    margin-top: 35px;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    width: 650px;
+  }
+}
